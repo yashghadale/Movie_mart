@@ -161,3 +161,43 @@
     display: none;
   }
 }
+
+.trending {
+ /* Removed scale to prevent movement */
+  max-width: 100%; /* Ensures it doesn’t exceed container width */
+  overflow: hidden; /* Prevents horizontal shifting */
+}
+
+
+.trending ul {
+  display: flex;
+  gap: 0px;
+  flex-wrap: wrap; /* Ensures movies stay within container */
+  justify-content: center; /* Centers movies inside */
+  padding: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.trending li {
+  list-style: none;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0; /* Prevents unwanted resizing */
+}
+
+.trending li:hover {
+  transform: scale(1.05); /* Slightly reduced to prevent shifting */
+}
+
+.trending img {
+  width: 120px;
+  height: 180px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.trending img:hover {
+  transform: scale(1.05);
+  
+}
